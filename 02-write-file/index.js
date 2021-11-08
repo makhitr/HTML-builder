@@ -11,14 +11,13 @@ stdout.write("Please write some text \n")
 readStream.on('data', data => {
   
   if (data.toString().trim() === 'exit') {
-    console.log('Bye!See you later!')
+    console.log('Bye! See you later!')
     process.exit()
   }
   writeStream.write(data);
-})
- 
+}) 
 
 process.on('SIGINT', () => {
-  console.log('Bye!See you later!');
+  console.log('Bye! See you later!');
   process.exit()
 });
